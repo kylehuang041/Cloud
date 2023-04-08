@@ -1,0 +1,37 @@
+<!--
+    Name: Kyle Huang
+    File: index.ejs
+    Date: 2/25/2023
+
+    Dynamic html page using ejs template engine
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js"></script>
+  <title><%= appName %></title>
+</head>
+<body>
+  <!-- Navigation -->
+  <%- include("layouts/nav") %>
+
+  <main>
+    <!-- Form -->
+    <%- include("layouts/form") %>
+    <div id="result" class="main-items">
+      <h2>Results</h2>
+      <!-- Result Container -->
+      <div id="result-container"></div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <%- include("layouts/footer") %>
+</body>
+</html>

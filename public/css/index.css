@@ -1,0 +1,137 @@
+/*
+    Name: Kyle Huang
+    File: index.css
+    Date: 2/25/2023
+
+    Style and responsiveness of webpage
+*/
+
+:root {
+    --gray-color: linear-gradient(to left, #1f1e1e, #1a1818, #1a1717);
+    --container-items-color: linear-gradient(#1e1e1e, #222121, #1a1919);
+}
+
+body {
+    color: ghostwhite;
+    background: linear-gradient(to right, #151212, #100e0e, #141414);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button, form input {
+    outline: none;
+    border-style: none;
+}
+
+/* Navigation */
+nav {
+    color: ghostwhite;
+    display: flex;
+    justify-content: space-between;
+    background: var(--gray-color);
+    display: flex;
+    padding: 0 1rem;
+}
+
+nav ol {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav button {
+    padding: 0.5em;
+    border-radius: 20px;
+}
+
+/* Main */
+main {
+    margin: 1em 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.main-items {
+    padding: 1.5em 2.5em;
+    background: var(--container-items-color);
+    border-radius: 10px;
+}
+
+/* Results */
+#result {
+    width: 80%;
+    height: 100%;
+    max-height: 85vh;
+    overflow: scroll;
+}
+
+#result-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    overflow-y: scroll;
+    grid-gap: 0.4em;
+}
+
+.result-items {
+    min-width: 0;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0.5em;
+    max-width: 200px;
+    max-height: 200px;
+    overflow: scroll;
+}
+
+/* Form */
+form {
+    width: 60%;
+    min-width: 190px;
+    max-width: 400px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    width: 100%;
+    margin: 0.5em 0;
+}
+
+form button {
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 1.5em;
+    margin: 0 auto;
+    background: var(--gray-color);
+}
+
+/* Class List */
+.hidden {
+    display: none;
+}
